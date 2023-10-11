@@ -1,0 +1,609 @@
+[ODBC][6436][1697053545.810146][SQLAllocHandle.c][377]
+		Entry:
+			Handle Type = 2
+			Input Handle = 0x30f3a30
+		UNICODE Using encoding ASCII 'UTF-8' and UNICODE 'UCS-2-INTERNAL'
+
+[ODBC][6436][1697053545.819792][SQLAllocHandle.c][513]
+		Exit:[SQL_SUCCESS]
+			Output Handle = 0x2647e80
+[ODBC][6436][1697053545.823645][SQLDriverConnectW.c][290]
+		Entry:
+			Connection = 0x2647e80
+			Window Hdl = (nil)
+			Str In = [Driver={ODBC Driver 18 for SQL Server};Server=127.0.0.1;Encrypt=no;UID={sa};PWD={msSQ_F123}][length = 91]
+			Str Out = (nil)
+			Str Out Max = 0
+			Str Out Ptr = (nil)
+			Completion = 0
+[ODBC][6436][1697053545.843024][SQLDriverConnectW.c][913]
+		Exit:[SQL_SUCCESS_WITH_INFO]                    
+			Connection Out [[NULL]]
+[ODBC][6436][1697053547.463174][SQLAllocHandle.c][560]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x2647e80
+[ODBC][6436][1697053547.467121][SQLAllocHandle.c][1105]
+		Exit:[SQL_SUCCESS]
+			Output Handle = 0x410e210
+[ODBC][6436][1697053547.470999][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x410e210
+			Attribute = SQL_ATTR_ASYNC_ENABLE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053547.475581][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053547.480005][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x410e210
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053547.484203][SQLExecDirectW.c][456]
+		Exit:[SQL_STILL_EXECUTING]
+[ODBC][6436][1697053547.487861][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x410e210
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053547.491640][SQLExecDirectW.c][456]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053547.495457][SQLRowCount.c][173]
+		Entry:
+			Statement = 0x410e210
+			Row Count = 0x7fa5b71206f0
+[ODBC][6436][1697053547.499426][SQLRowCount.c][247]
+		Exit:[SQL_SUCCESS]
+			Row Count = 0x7fa5b71206f0 -> -1 (64 bits)
+[ODBC][6436][1697053547.502708][SQLNumResultCols.c][156]
+		Entry:
+			Statement = 0x410e210
+			Column Count = 0x7fa5b7120700
+[ODBC][6436][1697053547.505721][SQLNumResultCols.c][251]
+		Exit:[SQL_SUCCESS]
+			Count = 0x7fa5b7120700 -> 2
+[ODBC][6436][1697053547.509314][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x410e210
+			Column Number = 1
+			Column Name = 0x40b4b40
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb59c238
+			Data Type = 0x7fa5fb59c5b8
+			Column Size = 0x7fa5fc02b150
+			Decimal Digits = 0x7fa5fb59c6b8
+			Nullable = 0x7fa5fb59c778
+[ODBC][6436][1697053547.512981][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [anid](unicode)                
+			Data Type = 0x7fa5fb59c5b8 -> -11                
+			Column Size = 0x7fa5fc02b150 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb59c6b8 -> 0                
+			Nullable = 0x7fa5fb59c778 -> 1
+[ODBC][6436][1697053547.516433][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x410e210
+			Column Number = 2
+			Column Name = 0x40b4b40
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb59c23a
+			Data Type = 0x7fa5fb59c5ba
+			Column Size = 0x7fa5fc02b158
+			Decimal Digits = 0x7fa5fb59c6ba
+			Nullable = 0x7fa5fb59c77a
+[ODBC][6436][1697053547.519850][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [strid](unicode)                
+			Data Type = 0x7fa5fb59c5ba -> 12                
+			Column Size = 0x7fa5fc02b158 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb59c6ba -> 0                
+			Nullable = 0x7fa5fb59c77a -> 0
+[ODBC][6436][1697053547.523350][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x410e210
+			Attribute = SQL_ATTR_ROW_ARRAY_SIZE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053547.526930][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053547.530530][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x410e210
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697053547.533386][SQLFetchScroll.c][356]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053547.536756][SQLGetData.c][237]
+		Entry:
+			Statement = 0x410e210
+			Column Number = 1
+			Target Type = -11 
+			Buffer Length = 36
+			Target Value = 0x7fa5fc02b510
+			StrLen Or Ind = 0x7fa5fb59cb00
+[ODBC][6436][1697053547.540123][SQLGetData.c][545]
+		Exit:[SQL_SUCCESS]                
+			Buffer = [Data...]                
+			Strlen Or Ind = 0x7fa5fb59cb00 -> 16 (64 bits)
+[ODBC][6436][1697053547.543607][SQLGetData.c][237]
+		Entry:
+			Statement = 0x410e210
+			Column Number = 2
+			Target Type = 1 SQL_CHAR
+			Buffer Length = 37
+			Target Value = 0x7fa5b57dfbd8
+			StrLen Or Ind = 0x7fa5fb59cc00
+[ODBC][6436][1697053547.547220][SQLGetData.c][545]
+		Exit:[SQL_SUCCESS]                
+			Buffer = [ABCD0000-0000-0000-1234-000000000000]                
+			Strlen Or Ind = 0x7fa5fb59cc00 -> 36 (64 bits)
+[ODBC][6436][1697053547.550818][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x410e210
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697053547.554259][SQLFetchScroll.c][356]
+		Exit:[SQL_NO_DATA]
+[ODBC][6436][1697053629.464057][SQLFreeStmt.c][144]
+		Entry:
+			Statement = 0x410e210
+			Option = 0
+[ODBC][6436][1697053629.468198][SQLFreeStmt.c][266]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053629.472559][SQLAllocHandle.c][560]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x2647e80
+[ODBC][6436][1697053629.476535][SQLAllocHandle.c][1105]
+		Exit:[SQL_SUCCESS]
+			Output Handle = 0x424e730
+[ODBC][6436][1697053629.480019][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x424e730
+			Attribute = SQL_ATTR_ASYNC_ENABLE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053629.483293][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053629.487117][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x424e730
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053629.491473][SQLExecDirectW.c][456]
+		Exit:[SQL_STILL_EXECUTING]
+[ODBC][6436][1697053629.495121][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x424e730
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053629.498674][SQLExecDirectW.c][456]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053629.501919][SQLRowCount.c][173]
+		Entry:
+			Statement = 0x424e730
+			Row Count = 0x7fa5b71237f0
+[ODBC][6436][1697053629.505446][SQLRowCount.c][247]
+		Exit:[SQL_SUCCESS]
+			Row Count = 0x7fa5b71237f0 -> -1 (64 bits)
+[ODBC][6436][1697053629.508949][SQLNumResultCols.c][156]
+		Entry:
+			Statement = 0x424e730
+			Column Count = 0x7fa5b7123800
+[ODBC][6436][1697053629.512624][SQLNumResultCols.c][251]
+		Exit:[SQL_SUCCESS]
+			Count = 0x7fa5b7123800 -> 2
+[ODBC][6436][1697053629.515804][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x424e730
+			Column Number = 1
+			Column Name = 0x3f58d40
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb5da3b8
+			Data Type = 0x7fa5fb5da3f8
+			Column Size = 0x7fa5fc063560
+			Decimal Digits = 0x7fa5fb5da478
+			Nullable = 0x7fa5fb5da4b8
+[ODBC][6436][1697053629.518538][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [anid](unicode)                
+			Data Type = 0x7fa5fb5da3f8 -> -11                
+			Column Size = 0x7fa5fc063560 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb5da478 -> 0                
+			Nullable = 0x7fa5fb5da4b8 -> 1
+[ODBC][6436][1697053629.521730][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x424e730
+			Column Number = 2
+			Column Name = 0x3f58d40
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb5da3ba
+			Data Type = 0x7fa5fb5da3fa
+			Column Size = 0x7fa5fc063568
+			Decimal Digits = 0x7fa5fb5da47a
+			Nullable = 0x7fa5fb5da4ba
+[ODBC][6436][1697053629.524684][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [strid](unicode)                
+			Data Type = 0x7fa5fb5da3fa -> 12                
+			Column Size = 0x7fa5fc063568 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb5da47a -> 0                
+			Nullable = 0x7fa5fb5da4ba -> 0
+[ODBC][6436][1697053629.527501][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x424e730
+			Attribute = SQL_ATTR_ROW_ARRAY_SIZE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053629.530245][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053629.669786][SQLFreeHandle.c][387]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x410e210
+[ODBC][6436][1697053629.673231][SQLFreeHandle.c][490]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053629.676483][SQLFreeHandle.c][387]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x3562b70
+[ODBC][6436][1697053629.679631][SQLFreeHandle.c][490]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053642.893950][SQLFreeStmt.c][144]
+		Entry:
+			Statement = 0x424e730
+			Option = 0
+[ODBC][6436][1697053642.897492][SQLFreeStmt.c][266]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053642.901007][SQLAllocHandle.c][560]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x2647e80
+[ODBC][6436][1697053642.904640][SQLAllocHandle.c][1105]
+		Exit:[SQL_SUCCESS]
+			Output Handle = 0x412fd30
+[ODBC][6436][1697053642.908421][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x412fd30
+			Attribute = SQL_ATTR_ASYNC_ENABLE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053642.912356][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053642.917023][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x412fd30
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053642.921095][SQLExecDirectW.c][456]
+		Exit:[SQL_STILL_EXECUTING]
+[ODBC][6436][1697053642.924193][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x412fd30
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053642.927319][SQLExecDirectW.c][456]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053642.930861][SQLRowCount.c][173]
+		Entry:
+			Statement = 0x412fd30
+			Row Count = 0x7fa5fbc93460
+[ODBC][6436][1697053642.934175][SQLRowCount.c][247]
+		Exit:[SQL_SUCCESS]
+			Row Count = 0x7fa5fbc93460 -> -1 (64 bits)
+[ODBC][6436][1697053642.937499][SQLNumResultCols.c][156]
+		Entry:
+			Statement = 0x412fd30
+			Column Count = 0x7fa5fbc93470
+[ODBC][6436][1697053642.940351][SQLNumResultCols.c][251]
+		Exit:[SQL_SUCCESS]
+			Count = 0x7fa5fbc93470 -> 2
+[ODBC][6436][1697053642.943288][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x412fd30
+			Column Number = 1
+			Column Name = 0x47d0c80
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb2de738
+			Data Type = 0x7fa5fb2de778
+			Column Size = 0x7fa5fbf0bec0
+			Decimal Digits = 0x7fa5fb2de878
+			Nullable = 0x7fa5fb2de8f8
+[ODBC][6436][1697053642.946212][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [anid](unicode)                
+			Data Type = 0x7fa5fb2de778 -> -11                
+			Column Size = 0x7fa5fbf0bec0 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb2de878 -> 0                
+			Nullable = 0x7fa5fb2de8f8 -> 1
+[ODBC][6436][1697053642.949575][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x412fd30
+			Column Number = 2
+			Column Name = 0x47d0c80
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb2de73a
+			Data Type = 0x7fa5fb2de77a
+			Column Size = 0x7fa5fbf0bec8
+			Decimal Digits = 0x7fa5fb2de87a
+			Nullable = 0x7fa5fb2de8fa
+[ODBC][6436][1697053642.952444][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [strid](unicode)                
+			Data Type = 0x7fa5fb2de77a -> 12                
+			Column Size = 0x7fa5fbf0bec8 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb2de87a -> 0                
+			Nullable = 0x7fa5fb2de8fa -> 0
+[ODBC][6436][1697053642.955417][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x412fd30
+			Attribute = SQL_ATTR_ROW_ARRAY_SIZE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053642.958364][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053696.588145][SQLFreeStmt.c][144]
+		Entry:
+			Statement = 0x412fd30
+			Option = 0
+[ODBC][6436][1697053696.591876][SQLFreeStmt.c][266]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053696.595593][SQLAllocHandle.c][560]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x2647e80
+[ODBC][6436][1697053696.599499][SQLAllocHandle.c][1105]
+		Exit:[SQL_SUCCESS]
+			Output Handle = 0x46b4000
+[ODBC][6436][1697053696.603194][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x46b4000
+			Attribute = SQL_ATTR_ASYNC_ENABLE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053696.607230][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053696.610926][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x46b4000
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053696.614779][SQLExecDirectW.c][456]
+		Exit:[SQL_STILL_EXECUTING]
+[ODBC][6436][1697053696.618264][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x46b4000
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697053696.621876][SQLExecDirectW.c][456]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053696.625319][SQLRowCount.c][173]
+		Entry:
+			Statement = 0x46b4000
+			Row Count = 0x7fa5fbcf1070
+[ODBC][6436][1697053696.629233][SQLRowCount.c][247]
+		Exit:[SQL_SUCCESS]
+			Row Count = 0x7fa5fbcf1070 -> -1 (64 bits)
+[ODBC][6436][1697053696.632930][SQLNumResultCols.c][156]
+		Entry:
+			Statement = 0x46b4000
+			Column Count = 0x7fa5fbcf1080
+[ODBC][6436][1697053696.636202][SQLNumResultCols.c][251]
+		Exit:[SQL_SUCCESS]
+			Count = 0x7fa5fbcf1080 -> 2
+[ODBC][6436][1697053696.646281][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x46b4000
+			Column Number = 1
+			Column Name = 0x4670e00
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb588c78
+			Data Type = 0x7fa5fb588cb8
+			Column Size = 0x7fa5fc013970
+			Decimal Digits = 0x7fa5fb588d38
+			Nullable = 0x7fa5fb588d78
+[ODBC][6436][1697053696.649806][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [anid](unicode)                
+			Data Type = 0x7fa5fb588cb8 -> -11                
+			Column Size = 0x7fa5fc013970 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb588d38 -> 0                
+			Nullable = 0x7fa5fb588d78 -> 1
+[ODBC][6436][1697053696.653319][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x46b4000
+			Column Number = 2
+			Column Name = 0x4670e00
+			Buffer Length = 1024
+			Name Length = 0x7fa5fb588c7a
+			Data Type = 0x7fa5fb588cba
+			Column Size = 0x7fa5fc013978
+			Decimal Digits = 0x7fa5fb588d3a
+			Nullable = 0x7fa5fb588d7a
+[ODBC][6436][1697053696.657317][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [strid](unicode)                
+			Data Type = 0x7fa5fb588cba -> 12                
+			Column Size = 0x7fa5fc013978 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5fb588d3a -> 0                
+			Nullable = 0x7fa5fb588d7a -> 0
+[ODBC][6436][1697053696.660643][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x46b4000
+			Attribute = SQL_ATTR_ROW_ARRAY_SIZE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697053696.663723][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053723.805763][SQLFreeHandle.c][387]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x412fd30
+[ODBC][6436][1697053723.809218][SQLFreeHandle.c][490]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053797.934382][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x46b4000
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697053797.939707][SQLFetchScroll.c][356]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697053797.943872][SQLGetData.c][237]
+		Entry:
+			Statement = 0x46b4000
+			Column Number = 1
+			Target Type = -11 
+			Buffer Length = 36
+			Target Value = 0x7fa5fc013ce0
+			StrLen Or Ind = 0x7fa5fb5890c0
+[ODBC][6436][1697053797.947835][SQLGetData.c][545]
+		Exit:[SQL_SUCCESS]                
+			Buffer = [Data...]                
+			Strlen Or Ind = 0x7fa5fb5890c0 -> 16 (64 bits)
+[ODBC][6436][1697053797.951516][SQLGetData.c][237]
+		Entry:
+			Statement = 0x46b4000
+			Column Number = 2
+			Target Type = 1 SQL_CHAR
+			Buffer Length = 37
+			Target Value = 0x7fa5b5809238
+			StrLen Or Ind = 0x7fa5fb589180
+[ODBC][6436][1697053797.956073][SQLGetData.c][545]
+		Exit:[SQL_SUCCESS]                
+			Buffer = [ABCD0000-0000-0000-1234-000000000000]                
+			Strlen Or Ind = 0x7fa5fb589180 -> 36 (64 bits)
+[ODBC][6436][1697053798.971116][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x46b4000
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697053798.974865][SQLFetchScroll.c][356]
+		Exit:[SQL_NO_DATA]
+[ODBC][6436][1697054535.953707][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x46b4000
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697054535.957004][SQLFetchScroll.c][356]
+		Exit:[SQL_NO_DATA]
+[ODBC][6436][1697054538.330906][SQLFreeStmt.c][144]
+		Entry:
+			Statement = 0x46b4000
+			Option = 0
+[ODBC][6436][1697054538.335855][SQLFreeStmt.c][266]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697054538.339973][SQLAllocHandle.c][560]
+		Entry:
+			Handle Type = 3
+			Input Handle = 0x2647e80
+[ODBC][6436][1697054538.344220][SQLAllocHandle.c][1105]
+		Exit:[SQL_SUCCESS]
+			Output Handle = 0x42e97e0
+[ODBC][6436][1697054538.348311][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x42e97e0
+			Attribute = SQL_ATTR_ASYNC_ENABLE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697054538.351656][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697054538.355556][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x42e97e0
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697054538.360335][SQLExecDirectW.c][456]
+		Exit:[SQL_STILL_EXECUTING]
+[ODBC][6436][1697054538.364916][SQLExecDirectW.c][177]
+		Entry:
+			Statement = 0x42e97e0
+			SQL = [SELECT CONVERT(uniqueidentifier, 'ABCD0000-0000-0000-1234-000000000000') AS anid, 'ABCD0000-0000-0000-1234-000000000000' AS str...][length = 129]
+[ODBC][6436][1697054538.368531][SQLExecDirectW.c][456]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697054538.372703][SQLRowCount.c][173]
+		Entry:
+			Statement = 0x42e97e0
+			Row Count = 0x7fa5fb2fc270
+[ODBC][6436][1697054538.377081][SQLRowCount.c][247]
+		Exit:[SQL_SUCCESS]
+			Row Count = 0x7fa5fb2fc270 -> -1 (64 bits)
+[ODBC][6436][1697054538.381185][SQLNumResultCols.c][156]
+		Entry:
+			Statement = 0x42e97e0
+			Column Count = 0x7fa5fb2fc280
+[ODBC][6436][1697054538.385442][SQLNumResultCols.c][251]
+		Exit:[SQL_SUCCESS]
+			Count = 0x7fa5fb2fc280 -> 2
+[ODBC][6436][1697054538.389613][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x42e97e0
+			Column Number = 1
+			Column Name = 0x3f2fd00
+			Buffer Length = 1024
+			Name Length = 0x7fa5f9b271b8
+			Data Type = 0x7fa5f9b271f8
+			Column Size = 0x7fa5b49dc770
+			Decimal Digits = 0x7fa5f9b272b8
+			Nullable = 0x7fa5f9b272f8
+[ODBC][6436][1697054538.393899][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [anid](unicode)                
+			Data Type = 0x7fa5f9b271f8 -> -11                
+			Column Size = 0x7fa5b49dc770 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5f9b272b8 -> 0                
+			Nullable = 0x7fa5f9b272f8 -> 1
+[ODBC][6436][1697054538.398344][SQLDescribeColW.c][209]
+		Entry:
+			Statement = 0x42e97e0
+			Column Number = 2
+			Column Name = 0x3f2fd00
+			Buffer Length = 1024
+			Name Length = 0x7fa5f9b271ba
+			Data Type = 0x7fa5f9b271fa
+			Column Size = 0x7fa5b49dc778
+			Decimal Digits = 0x7fa5f9b272ba
+			Nullable = 0x7fa5f9b272fa
+[ODBC][6436][1697054538.401695][SQLDescribeColW.c][467]
+		Exit:[SQL_SUCCESS]                
+			Column Name = [strid](unicode)                
+			Data Type = 0x7fa5f9b271fa -> 12                
+			Column Size = 0x7fa5b49dc778 -> 36 (64 bits)                
+			Decimal Digits = 0x7fa5f9b272ba -> 0                
+			Nullable = 0x7fa5f9b272fa -> 0
+[ODBC][6436][1697054538.405454][SQLSetStmtAttrW.c][166]
+		Entry:
+			Statement = 0x42e97e0
+			Attribute = SQL_ATTR_ROW_ARRAY_SIZE
+			Value = 0x1
+			StrLen = -5
+[ODBC][6436][1697054538.409237][SQLSetStmtAttrW.c][720]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697054539.794262][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x42e97e0
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697054539.798495][SQLFetchScroll.c][356]
+		Exit:[SQL_SUCCESS]
+[ODBC][6436][1697054539.802006][SQLGetData.c][237]
+		Entry:
+			Statement = 0x42e97e0
+			Column Number = 1
+			Target Type = -11 
+			Buffer Length = 36
+			Target Value = 0x7fa5b49dca40
+			StrLen Or Ind = 0x7fa5f9b27600
+[ODBC][6436][1697054539.805451][SQLGetData.c][545]
+		Exit:[SQL_SUCCESS]                
+			Buffer = [Data...]                
+			Strlen Or Ind = 0x7fa5f9b27600 -> 16 (64 bits)
+[ODBC][6436][1697054539.809280][SQLGetData.c][237]
+		Entry:
+			Statement = 0x42e97e0
+			Column Number = 2
+			Target Type = 1 SQL_CHAR
+			Buffer Length = 37
+			Target Value = 0x7fa5b57dcf38
+			StrLen Or Ind = 0x7fa5f9b276c0
+[ODBC][6436][1697054539.812822][SQLGetData.c][545]
+		Exit:[SQL_SUCCESS]                
+			Buffer = [ABCD0000-0000-0000-1234-000000000000]                
+			Strlen Or Ind = 0x7fa5f9b276c0 -> 36 (64 bits)
+[ODBC][6436][1697054539.816693][SQLFetchScroll.c][159]
+		Entry:
+			Statement = 0x42e97e0
+			Fetch Orentation = 1
+			Fetch Offset = 0
+[ODBC][6436][1697054539.820143][SQLFetchScroll.c][356]
+		Exit:[SQL_NO_DATA]
