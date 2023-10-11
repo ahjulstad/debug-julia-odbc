@@ -24,5 +24,3 @@ volumes:
   db-data:
 
   dotjulia:
-    external: true 
-    name: dotjulia

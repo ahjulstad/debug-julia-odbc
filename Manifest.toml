@@ -240,7 +240,7 @@ version = "1.2.0"
 
 [[deps.ODBC]]
 deps = ["DBInterface", "Dates", "DecFP", "Libdl", "Printf", "Random", "Scratch", "Tables", "UUIDs", "Unicode", "iODBC_jll", "unixODBC_jll"]
-path = "/home/vscode/.julia/dev/ODBC"
+git-tree-sha1 = "7fe19bed38551e3169edaec8bb8673354d355681"
 uuid = "be6f12e9-ca4f-5eb2-a339-a4f995cc0291"
 version = "1.1.2"
 

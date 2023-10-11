@@ -1,5 +1,6 @@
 import Pkg
 Pkg.activate(".")
+Pkg.instantiate()
 # Pkg.add(["ODBC", "DBInterface", "DataFrames"])
 using Revise
 Revise.track(Base)
@@ -7,7 +8,7 @@ import ODBC
 using DBInterface
 using DataFrames
 
-ODBC.adddriver("ODBC Driver 18 for SQL Server", "/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.3.so.1.1")
+ODBC.adddriver("ODBC Driver 18 for SQL Server", "/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.3.so.2.1")
 
 # ODBC.setdebug(true, "odbcdebug.log")
 
